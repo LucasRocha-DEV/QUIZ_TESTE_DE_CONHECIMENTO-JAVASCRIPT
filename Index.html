@@ -5,6 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QUIZ - CONHECIMENTOS SOBRE JAVASCRIPT</title>
+    <style>
+        #acertos {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #00ff0d; /* Cor de fundo azul */
+            color: white; /* Cor do texto branco */
+            padding: 10px 0; /* Espaçamento interno para dar um pouco de espaço ao texto */
+            text-align: center; /* Centraliza o texto horizontalmente */
+            font-size: 20px; /* Tamanho da fonte */
+            font-weight: bold; /* Fonte em negrito */
+            border-top: 2px solid #7db300; /* Borda superior */
+        }
+    </style>
 </head>
 <body>
     <!-- Início do corpo do documento HTML -->
@@ -32,7 +46,11 @@
         </div> <!-- Fim da divisão que representa um item do quiz -->
 
     </template> <!-- Fim do template -->
-
+    <div style="height: 30px;"></div> <!-- Espaço em branco no final do conteúdo -->
+    <div id="acertos">
+        <strong>Acertos:</strong> <!-- Texto que indica a quantidade de acertos do usuário -->
+        <span>0</span> <!-- Número que indica a quantidade de acertos do usuário. Este será atualizado pelo script.js -->
+    </div>
 </body> <!-- Fim do corpo do documento HTML -->
 
 <script src="script.js"></script> <!-- Importação do arquivo script.js que contém a lógica do quiz -->

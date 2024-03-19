@@ -95,6 +95,12 @@ const quiz = document.querySelector('#quiz') // Seleciona o elemento com o id "q
 const templante = document.querySelector('template') // Seleciona o elemento "template" e armazena na variável "templante"
 const quizItem = templante.content.cloneNode(true) // Clona o conteúdo do elemento "template" e armazena na variável "quizItem"
 
+const corretas = new Set() // Cria um conjunto vazio e armazena na variável "corretas"
+const totalDePerguntas = perguntas.length // Armazena o tamanho do array "perguntas" na variável "totalDePerguntas"
+const mostrarResultado = document.querySelector('#acertos span') // Define a função "mostrarResultado"
+
+
+
 // Laço de repetição
 for(const item of perguntas) { // Para cada item no array "perguntas"
     const quizItem = templante.content.cloneNode(true) // Clona o conteúdo do elemento "template" e armazena na variável "quizItem"
@@ -102,19 +108,19 @@ for(const item of perguntas) { // Para cada item no array "perguntas"
     
     for(let respostas of item.respostas) { // Para cada resposta no array de respostas do item atual
         const dt = quizItem.querySelector('dl dt').cloneNode(true) // Clona o elemento "dt" dentro de "quizItem" e armazena na variável "dt"
+        
         dt.querySelector('span').textContent = respostas // Define o texto do elemento "span" dentro de "dt" como a resposta atual
         dt.querySelector('input').setAttribute('name','pergunta-' + perguntas.indexOf(item)) // Define o atributo "name" do elemento "input" dentro de "dt" como 'pergunta-' + o índice do item atual
         dt.querySelector('input').setAttribute('value',item.respostas.indexOf(respostas)) // Define o atributo "value" do elemento "input" dentro de "dt" como o índice da resposta atual
         dt.querySelector('input').onchange = (event) => {
             const estaCorreta = event.target.value == item.correta // Verifica se o valor do elemento "input" que disparou o evento "change" é igual ao índice da resposta correta
+            
+            corretas.delete(item) // Remove o item do conjunto "corretas"
             if(estaCorreta) {
-                alert('Correta!') // Se a resposta estiver correta, exibe um alerta com o texto "Correta!"
+                corretas.add(item) // Adiciona o item ao conjunto "corretas"
+             } 
+             mostrarResultado.textContent = corretas.size + " pontos"; // Define o texto do elemento "span" dentro de "mostrarResultado" como o tamanho do conjunto "corretas"
             }
-            else {
-                alert('Incorreta!') // Se a resposta estiver incorreta, exibe um alerta com o texto "Incorreta!"
-            }
-    }
-
 
         quizItem.querySelector('dl').appendChild(dt) // Adiciona o elemento "dt" ao elemento "dl" dentro de "quizItem"
     }
