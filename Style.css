@@ -31,6 +31,8 @@
             margin-bottom: -22px; /* Adiciona um espaço de 20px na parte inferior do elemento h1 */
             padding: 16px 24px;
             color: azure;
+            background-color: #3f3f3f; /* Cor de fundo cinza */
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Define a fonte para o título */
         }
 
         .quiz-item {
@@ -117,12 +119,14 @@
         }
 
         #acertos {
-            visibility: hidden;
-            opacity: 0;
-            transition: visibility 0s, opacity 2s linear;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            visibility: hidden; /* Define a visibilidade como oculta */
+            opacity: 0; /* Define a opacidade como 0 */
+            transition: visibility 0s, opacity 2s linear; /* Adiciona uma transição de 2 segundos para a visibilidade e opacidade */
+            position: fixed; /* Posiciona o elemento de forma fixa */
+            bottom: 0; /* Posiciona o elemento no canto inferior direito */
+            left: 50%; /* Adicionado para centralizar horizontalmente */
+            transform: translateX(-50%); /* Adicionado para centralizar horizontalmente */
+            width: 100%; /* Largura total */
             background-color: #00ff0d; /* Cor de fundo azul */
             color: rgb(73, 73, 73); /* Cor do texto branco */
             padding: 10px 0; /* Espaçamento interno para dar um pouco de espaço ao texto */
@@ -130,7 +134,6 @@
             font-size: 20px; /* Tamanho da fonte */
             font-weight: bold; /* Fonte em negrito */
             border-top: 2px solid #7db300; /* Borda superior */
-            margin-left: -20px; /* Remove o espaço de 20px à esquerda do elemento #acertos */
         }
 
         #finalizar {

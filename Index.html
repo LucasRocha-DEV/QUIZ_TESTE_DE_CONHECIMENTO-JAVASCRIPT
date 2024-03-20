@@ -9,41 +9,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
-    <!-- Início do corpo do documento HTML -->
-<header>
-    <h1>QUIZ - CONHECIMENTOS SOBRE JAVASCRIPT</h1> <!-- Título principal da página -->
-</header>
-    <body>
+<body>
+    <main>
+        <header>
+            <h1>QUIZ - CONHECIMENTOS SOBRE JAVASCRIPT</h1> <!-- Título principal da página -->
+        </header>
+        <div id="quiz"></div> <!-- Divisão onde as perguntas do quiz serão inseridas pelo script.js -->
 
-    <div id="quiz"></div> <!-- Divisão onde as perguntas do quiz serão inseridas pelo script.js -->
+        <template>  <!-- Início do template que será usado para criar cada item do quiz -->
+            <!-- Este é um template para um item do quiz -->
 
-    <template>  <!-- Início do template que será usado para criar cada item do quiz -->
-        <!-- Este é um template para um item do quiz -->
+            <div class="quiz-item"> <!-- Divisão que representa um item do quiz -->
+                <h3>
+                    Pergunta 01 <!-- Título da pergunta. Este será substituído pela pergunta real do array perguntas no script.js -->
+                </h3>
 
-        <div class="quiz-item"> <!-- Divisão que representa um item do quiz -->
-            <h3>
-                Pergunta 01 <!-- Título da pergunta. Este será substituído pela pergunta real do array perguntas no script.js -->
-            </h3>
+                <dl> <!-- Lista de definição para agrupar cada conjunto de pergunta e resposta -->
+                    <dt> <!-- Termo da lista de definição. Neste caso, representa uma opção de resposta -->
+                        <input type="radio" name="item" value="0"> <!-- Botão de opção para selecionar a resposta. O atributo name deve ser o mesmo para todas as opções de uma pergunta -->
+                        <span>
+                            Resposta A <!-- Texto da resposta. Este será substituído pela resposta real do array perguntas no script.js -->
+                        </span>
+                    </dt>
+                </dl>
+            </div> <!-- Fim da divisão que representa um item do quiz -->
 
-            <dl> <!-- Lista de definição para agrupar cada conjunto de pergunta e resposta -->
-                <dt> <!-- Termo da lista de definição. Neste caso, representa uma opção de resposta -->
-                    <input type="radio" name="item" value="0"> <!-- Botão de opção para selecionar a resposta. O atributo name deve ser o mesmo para todas as opções de uma pergunta -->
-                    <span>
-                        Resposta A <!-- Texto da resposta. Este será substituído pela resposta real do array perguntas no script.js -->
-                    </span>
-                </dt>
-            </dl>
-        </div> <!-- Fim da divisão que representa um item do quiz -->
-
-    </template> <!-- Fim do template -->
-    <div style="height: 30px;"></div> <!-- Espaço em branco no final do conteúdo -->
-    <div id="acertos">
-        <strong>Acertos:</strong> <!-- Texto que indica a quantidade de acertos do usuário -->
-        <span>0</span> <!-- Número que indica a quantidade de acertos do usuário. Este será atualizado pelo script.js -->
-    </div>
-    <button id="finalizar"><i class="fas fa-check"></i> Finalizar</button> <!-- Botão para finalizar o quiz. Este será usado para verificar as respostas do usuário -->
-
-</body> <!-- Fim do corpo do documento HTML -->
-
-<script src="script.js"></script> <!-- Importação do arquivo script.js que contém a lógica do quiz -->
+        </template> <!-- Fim do template -->
+        <div style="height: 30px;"></div> <!-- Espaço em branco no final do conteúdo -->
+        <div id="acertos">
+            <strong>Acertos:</strong> <!-- Texto que indica a quantidade de acertos do usuário -->
+            <span>0</span> <!-- Número que indica a quantidade de acertos do usuário. Este será atualizado pelo script.js -->
+        </div>
+        <button id="finalizar"><i class="fas fa-check"></i> Finalizar</button> <!-- Botão para finalizar o quiz. Este será usado para verificar as respostas do usuário -->
+    </main>
+    <script src="script.js"></script> <!-- Importação do arquivo script.js que contém a lógica do quiz -->
+</body>
 </html>
