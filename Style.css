@@ -119,6 +119,9 @@
         }
 
         #acertos {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 2s linear;
             position: fixed;
             bottom: 0;
             width: 100%;

@@ -99,7 +99,12 @@ const corretas = new Set() // Cria um conjunto vazio e armazena na variável "co
 const totalDePerguntas = perguntas.length // Armazena o tamanho do array "perguntas" na variável "totalDePerguntas"
 const mostrarResultado = document.querySelector('#acertos span') // Define a função "mostrarResultado"
 
-
+// Evento de clique
+document.getElementById('finalizar').addEventListener('click', function() {
+    var acertos = document.getElementById('acertos');
+    acertos.style.visibility = 'visible';
+    acertos.style.opacity = '1';
+});
 
 // Laço de repetição
 for(const item of perguntas) { // Para cada item no array "perguntas"
