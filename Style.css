@@ -37,14 +37,12 @@
             margin-top: 20px; /* Adiciona um espaço de 20px na parte inferior do elemento .quiz-item */
             border: 1px solid #7b7676; /* Adiciona uma borda ao redor do elemento .quiz-item */
             border-radius: 6px; /* Adiciona um raio de 6px às bordas do elemento .quiz-item */
-        }
-
-
-        .quiz-item {
             background-color: #3a3a3a; /* Define o fundo da pergunta como cinza claro */
+
         }
 
         .quiz-item h3 {
+            counter-reset: quiz-item; /* Inicializa o contador */
             font-size: 20px; /* Tamanho da fonte */
             padding: 16px 20px; /* Adiciona um espaço de 16px na parte superior e inferior e 14px na parte esquerda e direita do elemento h3 */
             color: azure;
@@ -60,7 +58,7 @@
         .quiz-item h3:before {
             counter-increment: quiz-item; /* Incrementa o contador */
             content: counter(quiz-item); /* Adiciona o número da pergunta antes do título */
-            
+  
             background-color: #2b2b2b; /* Cor de fundo verde */
             width: 30px; /* Largura do contador */
             height: 30px; /* Altura do contador */
@@ -133,4 +131,22 @@
             font-weight: bold; /* Fonte em negrito */
             border-top: 2px solid #7db300; /* Borda superior */
             margin-left: -20px; /* Remove o espaço de 20px à esquerda do elemento #acertos */
+        }
+
+        #finalizar {
+            background-color: #00b318; /* Cor de fundo do botão */
+            color: white; /* Cor do texto do botão */
+            padding: 15px 32px; /* Espaçamento interno para dar um pouco de espaço ao texto */
+            text-align: center; /* Centraliza o texto horizontalmente */
+            text-decoration: none; /* Remove o sublinhado do texto */
+            display: inline-block;
+            font-size: 16px; /* Tamanho da fonte */
+            margin: 4px 2px; /* Margem ao redor do botão */
+            cursor: pointer; /* Muda o cursor para um ponteiro quando você passa o mouse sobre o botão */
+            border-radius: 12px; /* Arredonda os cantos do botão */
+            border: none; /* Remove a borda padrão do botão */
+        }
+
+        #finalizar:hover {
+            background-color: #008c15; /* Muda a cor de fundo quando você passa o mouse sobre o botão */
         }
