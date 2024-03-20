@@ -80,7 +80,7 @@
 
         .quiz-item dl dt {
             font-size: 14px; /* Tamanho da fonte */
-            margin-bottom: 10px; /* Adiciona um espaço de 20px na parte inferior do elemento span */
+            margin-bottom: 20px; /* Adiciona um espaço de 20px na parte inferior do elemento span */
             font-weight: bold; /* Adiciona negrito ao elemento span */
             letter-spacing: 0;
             display: flex;
@@ -99,6 +99,15 @@
             position: relative; /* Define a posição relativa para o input */
             cursor: pointer; /* Adiciona um cursor de mão ao passar o mouse sobre o input */
             flex-shrink: 0;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+        }
+        
+        input[type="radio"] {
+            margin-right: 7px; /* Adiciona 10px de espaço à direita do input */
         }
 
         input:checked {
