@@ -17,7 +17,26 @@
             padding-left: 20px; /* Adiciona um espaço de 20px à esquerda de todos os elementos dentro do body */
             padding-bottom: 50px; /* Adiciona um espaço de 50px na parte inferior do body */
         }
-    
+        header {
+            margin-top: 64px; /* Adiciona um espaço de 64px na parte superior do elemento header */
+            padding-bottom: 24px; /* Adiciona um espaço de 24px na parte inferior do elemento header */
+            border-bottom: 1px solid #7b7676; /* Adiciona uma borda na parte inferior do elemento header */
+
+        }
+        header h1 {
+            font-size: 32px; /* Tamanho da fonte */
+            margin-bottom: 20px; /* Adiciona um espaço de 20px na parte inferior do elemento h1 */
+        }
+        h3 {
+            font-size: 24px; /* Tamanho da fonte */
+            margin-top: 10px;
+            margin-bottom: 10px; /* Adiciona um espaço de 20px na parte inferior do elemento h3 */
+        }
+        span {
+            font-size: 20px; /* Tamanho da fonte */
+            margin-top: 10px;
+            margin-bottom: 10px; /* Adiciona um espaço de 20px na parte inferior do elemento span */
+        }
         #acertos {
             position: fixed;
             bottom: 0;
