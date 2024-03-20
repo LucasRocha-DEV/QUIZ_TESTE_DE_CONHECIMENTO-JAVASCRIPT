@@ -14,29 +14,105 @@
             margin: 0 auto 64px; /* Centraliza o elemento main horizontalmente e adiciona um espaço de 64px na parte inferior */
         }
         body {
+            background-color: rgb(0, 0, 0);
             padding-left: 20px; /* Adiciona um espaço de 20px à esquerda de todos os elementos dentro do body */
             padding-bottom: 50px; /* Adiciona um espaço de 50px na parte inferior do body */
         }
         header {
-            margin-top: 64px; /* Adiciona um espaço de 64px na parte superior do elemento header */
+            margin-top: 24px; /* Adiciona um espaço de 64px na parte superior do elemento header */
             padding-bottom: 24px; /* Adiciona um espaço de 24px na parte inferior do elemento header */
+            border: 1px solid #7b7676; /* Adiciona uma borda ao redor do elemento header */
+            border-radius: 6px; /* Adiciona um raio de 6px às bordas do elemento header */
             border-bottom: 1px solid #7b7676; /* Adiciona uma borda na parte inferior do elemento header */
 
         }
         header h1 {
             font-size: 32px; /* Tamanho da fonte */
-            margin-bottom: 20px; /* Adiciona um espaço de 20px na parte inferior do elemento h1 */
+            margin-bottom: -22px; /* Adiciona um espaço de 20px na parte inferior do elemento h1 */
+            padding: 16px 24px;
+            color: azure;
         }
-        h3 {
+
+        .quiz-item {
+            margin-top: 20px; /* Adiciona um espaço de 20px na parte inferior do elemento .quiz-item */
+            padding: 20px; /* Adiciona um espaço de 20px em todos os lados do elemento .quiz-item */
+            border: 1px solid #7b7676; /* Adiciona uma borda ao redor do elemento .quiz-item */
+            border-radius: 6px; /* Adiciona um raio de 6px às bordas do elemento .quiz-item */
+        }
+
+
+        .quiz-item {
+            background-color: #3a3a3a; /* Define o fundo da pergunta como cinza claro */
+        }
+
+        .quiz-item h3 {
             font-size: 24px; /* Tamanho da fonte */
-            margin-top: 10px;
-            margin-bottom: 10px; /* Adiciona um espaço de 20px na parte inferior do elemento h3 */
+            padding: 16px 14px;
+            color: azure;
+
+            display: flex;
+            align-items: center;
+
         }
-        span {
+
+        .quiz-item h3:before {
+            counter-increment: quiz-item; /* Incrementa o contador */
+            content: counter(quiz-item); /* Adiciona o número da pergunta antes do título */
+            
+            background-color: #00b318; /* Cor de fundo verde */
+            width: 28px; /* Largura do contador */
+            height: 28px; /* Altura do contador */
+            border-radius: 50%; /* Adiciona um raio de 50% às bordas do contador */
+
+            display: flex; /* Define o display como flexível */
+            align-items: center; /* Alinha o conteúdo verticalmente */
+            justify-content: center; /* Alinha o conteúdo horizontalmente */           
+        }
+
+        .quiz-item dl {
+            padding: 0px 14px;
             font-size: 20px; /* Tamanho da fonte */
-            margin-top: 10px;
-            margin-bottom: 10px; /* Adiciona um espaço de 20px na parte inferior do elemento span */
+            color: rgb(217, 217, 217);
         }
+
+        .quiz-item dl dt {
+            font-size: 14px; /* Tamanho da fonte */
+            margin-bottom: 10px; /* Adiciona um espaço de 20px na parte inferior do elemento span */
+            font-weight: bold; /* Adiciona negrito ao elemento span */
+            letter-spacing: 0;
+            display: flex;
+            aling-items: center;
+            gap: 7px;
+        }
+
+        input {
+            all: unset; /* Remove todos os estilos padrão do input */
+            border: 1px solid #7b7676; /* Adiciona uma borda ao redor do input */
+            border-radius: 50%; /* Adiciona um raio de 4px às bordas do input */
+            padding: 8px; /* Adiciona um espaço interno de 8px no input */
+            font-size: 16px; /* Tamanho da fonte */
+            outline: none; /* Remove o contorno ao focar no input */
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao input */
+            position: relative; /* Define a posição relativa para o input */
+        }
+
+        input:checked {
+            background-color: transparent; /* Define a cor de fundo como transparente */
+            color: transparent; /* Define a cor do texto como transparente */
+        }
+
+        input:checked::after {
+            content: ""; /* Adiciona conteúdo vazio ao pseudo-elemento */
+            position: absolute; /* Define a posição absoluta para o pseudo-elemento */
+            top: 50%; /* Posiciona o pseudo-elemento no centro verticalmente */
+            left: 50%; /* Posiciona o pseudo-elemento no centro horizontalmente */
+            transform: translate(-50%, -50%); /* Centraliza o pseudo-elemento */
+            width: 8px; /* Define a largura do ponto */
+            height: 8px; /* Define a altura do ponto */
+            background-color: #00b318; /* Cor do ponto verde */
+            border-radius: 50%; /* Define o raio para criar um ponto circular */
+        }
+
         #acertos {
             position: fixed;
             bottom: 0;
