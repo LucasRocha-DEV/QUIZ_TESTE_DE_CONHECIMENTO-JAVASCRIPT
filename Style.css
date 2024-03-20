@@ -1,0 +1,33 @@
+        /* Estilos para o quiz */
+        *, :root {
+            margin: 0; /* Remove o espaçamento padrão do corpo do documento */
+            padding: 0; /* Remove o espaçamento padrão do corpo do documento */
+            font-family: 'Roboto', sans-serif; /* Define a fonte padrão para o corpo do documento */
+            font-synthesis: none; /* Remove a síntese de fontes */
+            -webkit-font-smoothing: antialiased; /* Suaviza as fontes no Google Chrome */
+            -moz-osx-font-smoothing: grayscale; /* Suaviza as fontes no Firefox */
+            -webkit-animation: 100%; /* Corrige um bug de animação no Google Chrome */
+        }
+        main {
+            padding: 20px; /* Adiciona um espaço de 20px em todos os lados do elemento main */
+            max-width: 640px; /* Largura máxima do elemento main */
+            margin: 0 auto 64px; /* Centraliza o elemento main horizontalmente e adiciona um espaço de 64px na parte inferior */
+        }
+        body {
+            padding-left: 20px; /* Adiciona um espaço de 20px à esquerda de todos os elementos dentro do body */
+            padding-bottom: 50px; /* Adiciona um espaço de 50px na parte inferior do body */
+        }
+    
+        #acertos {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #00ff0d; /* Cor de fundo azul */
+            color: white; /* Cor do texto branco */
+            padding: 10px 0; /* Espaçamento interno para dar um pouco de espaço ao texto */
+            text-align: center; /* Centraliza o texto horizontalmente */
+            font-size: 20px; /* Tamanho da fonte */
+            font-weight: bold; /* Fonte em negrito */
+            border-top: 2px solid #7db300; /* Borda superior */
+            margin-left: -20px; /* Remove o espaço de 20px à esquerda do elemento #acertos */
+        }
